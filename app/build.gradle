@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.example.test.google"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    compile 'com.akexorcist:googledirectionlibrary:1.0.5'
+    compile 'com.google.android.gms:play-services:11.0.4'
+    compile 'com.sothree.slidinguppanel:library:3.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:multidex:1.0.0'
+}
